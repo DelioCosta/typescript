@@ -59,3 +59,11 @@ function falhou(){
     return erro('Algo falhou');
 }
 //função falhou também é do tipo never por retornar uma função do tipo never (erro)
+
+//Union types
+const nota2: number | string = 10;
+function exibirNota(nota2: number | string){
+    console.log(`A nota é :${nota2}`);
+};
+exibirNota(10);
+exibirNota('10');
