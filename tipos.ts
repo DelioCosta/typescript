@@ -46,6 +46,8 @@ function criar (objeto: object){
 criar({propriedade: 1,})
 // criar("Delio") -> vai dar erro
 
+//------------------------------------------------------------
+
 //Never
 function loopInfinito(): never {
     while(true){ }
@@ -60,6 +62,8 @@ function falhou(){
 }
 //função falhou também é do tipo never por retornar uma função do tipo never (erro)
 
+//------------------------------------------------------------
+
 //Union types
 const nota2: number | string = 10;
 function exibirNota(nota2: number | string){
@@ -67,3 +71,24 @@ function exibirNota(nota2: number | string){
 };
 exibirNota(10);
 exibirNota('10');
+
+
+//------------------------------------------------------------
+
+
+//Type Alias
+type Funcionario = {
+    nome: string,
+    sobrenome: string,
+    dataNascimento: Date;
+}
+
+const funcionarios: Funcionario[] = [{
+    nome: "Délio",
+    sobrenome: "Costa",
+    dataNascimento: new Date()
+}];
+
+function tratarFuncionarios(funcionarios: Funcionario[]){
+    //......
+}
