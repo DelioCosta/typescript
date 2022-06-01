@@ -75,7 +75,6 @@ exibirNota('10');
 
 //------------------------------------------------------------
 
-
 //Type Alias
 type Funcionario = {
     nome: string,
@@ -91,4 +90,19 @@ const funcionarios: Funcionario[] = [{
 
 function tratarFuncionarios(funcionarios: Funcionario[]){
     //......
+}
+
+//------------------------------------------------------------
+
+//Tipos nulos ou opcionais
+
+type Contato = {
+    nome: string,
+    telefone: string,
+    telefone2?: string
+}
+
+const contato: Contato = {
+    nome: 'Délio',
+    telefone: '99999999'
 }
