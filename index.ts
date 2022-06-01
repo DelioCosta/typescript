@@ -1,9 +1,44 @@
-function somar(numero1: number, numero2: number){
-    return numero1+numero2;
+//Exercicio 1
+const identificationMock: string = 'alo@gama.com';
+const passwordMock: string = 'aloSenha1';
+
+function login(identification: string, password: string): boolean {
+    if(identification === identificationMock && password === passwordMock){
+        return true;
+    } 
+    return false;
 }
 
-const meuNumero1 = 25;
-const meuNumero2 = 8;
+console.log(login('alo@gama.com', 'aloSenha1'));
 
-const resultado = somar (meuNumero1, meuNumero2);
-console.log(resultado);
+console.log(login('teste', '123'));
+
+//Exercicio 2
+
+type Produto = {
+    nome: string,
+    codigoBarras: number,
+    preco: number,
+    desconto?: number
+}
+
+const produto: Produto = {
+    nome: 'garrafa',
+    codigoBarras: 12345436547,
+    preco: 19.90
+};
+
+const produto2: Produto = {
+    nome: 'caneca',
+    codigoBarras: 12345436547,
+    preco: 24.90,
+    desconto: 2.49
+};
+
+//Exercicio 3
+
+const listaDeProdutos: Produto[] = [produto, produto2];
+
+function listProdutos(lista: Produto[]){
+    
+}
